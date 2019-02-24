@@ -1,0 +1,48 @@
+{
+  "name": "uru-ubi",
+  "version": "1.0.0",
+  "description": "Uru-Ubi is an app for managing animal production especially for pigs. This app is supposed to keep track of inputs, income and activities.",
+  "main": "index.js",
+  "scripts": {
+    "devstart": "nodemon --exec babel-node ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mecsoccer/Uru-Ubi.git"
+  },
+  "keywords": [
+    "es6",
+    "javascript",
+    "nodejs",
+    "babel",
+    "eslint",
+    "mocha",
+    "chai",
+    "ci"
+  ],
+  "author": "Jaachimma Onyenze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mecsoccer/Uru-Ubi/issues"
+  },
+  "homepage": "https://github.com/mecsoccer/Uru-Ubi#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "express": "^4.16.4",
+    "mocha": "^6.0.1"
+  }
+}
