@@ -17,9 +17,10 @@
 @media screen and (min-width: 300px) {
     /*customs*/
     .card{
-        width: 92px;
+        width: 40%;
+        max-width: 130px;
         height: 88px;
-        margin: 2%;
+        margin: 4%;
     }
 }
 
@@ -122,6 +123,12 @@
         padding: 10px;
     }
     /* customs */
+    .input-form{
+        padding: 20px 25%;
+    }
+    .form-container {
+        margin: 25px 15%;
+    }
     .form-responsive{
         padding: 30px 15%;
     }
