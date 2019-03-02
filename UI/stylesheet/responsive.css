@@ -1,0 +1,138 @@
+@media screen and (min-width: 100px) {
+    /*customs*/
+    .card{
+        margin: 3px;
+    }
+}
+
+@media screen and (min-width: 200px) {
+    /*customs*/
+    .card{
+        width: 80px;
+        height: 105px;
+        margin: 13px;
+    }
+}
+
+@media screen and (min-width: 300px) {
+    /*customs*/
+    .card{
+        width: 40%;
+        max-width: 130px;
+        height: 88px;
+        margin: 4%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    /*customs*/
+    .form-responsive{
+        padding: 30px 10%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .days td {
+        padding: 0 16px;
+    }
+    .top-navbar{
+        height: 80px;
+        margin-bottom: 85px;
+    }
+    .logo-name{
+        font-size: 32px;
+        padding: 15px;
+    }
+    .sign-in-container{
+        background-color: white;
+        box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+        padding: 4% 10%;
+        margin: 170px 20% 0 20%;
+        width: auto;
+    }
+    .container.open{
+        width: 100%;
+        padding: 4% 20%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .logo-name{
+        width: 100%;
+    }
+    .menu-button-2{
+        display: block;
+    }
+    .back-arrow{
+        display: none;
+    }
+    .tab-position{
+        padding: 5px 10% 0 10%;
+    }
+    .tab-container{
+        padding: 27px 10%;
+    }
+    .tab {
+        width: auto;
+        max-width: 34%;
+    }
+    .main{
+        -webkit-transform: translate(25vw, 0);
+        transform: translate(25vw, 0);
+        transition: transform 0.3s ease;
+        width: 75%;
+    }
+    .main-full{
+        width: 100%;
+        transform: translate(0, 0);
+        transition: transform 0.3s ease;
+    }
+    /* custom css*/
+    .side-bar{
+        width: 25%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        transition: transform 0.3s ease;
+    }
+    .side-bar-close{
+        -webkit-transform: translate(-25vw, 0);
+        transform: translate(-25vw, 0);
+        transition: transform 0.3s ease;
+    }
+    .container{
+        margin-top: 80px;
+        width: 75%;
+        float: right;
+    }
+    .products{
+        height: 60vh;
+    }
+    .days td {
+        padding: 7px 42px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .card{
+        width: 145px;
+        height: 115px;
+        margin: 3%;
+        padding: 10px;
+    }
+    /* customs */
+    .input-form{
+        padding: 20px 25%;
+    }
+    .form-container {
+        margin: 25px 15%;
+    }
+    .form-responsive{
+        padding: 30px 15%;
+    }
+    .modal-content{
+        width: 60%;
+    }
+}
