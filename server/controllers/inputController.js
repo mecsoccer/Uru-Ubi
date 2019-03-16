@@ -90,31 +90,6 @@ class Inputs {
     return true;
   }
 
-/*  static editInput(req, res) {
-    const { id } = req.params;
-    const {
-      name, batch, price, unitQuantity,
-    } = req.body;
-
-    if (/[0-9]+/.test(id) === false) {
-      return res.status(400).json({ error: 'request url contains id(parameter) that is not a number' });
-    }
-
-    const text = 'UPDATE inputs SET name=$1, batch=$2, price=$3, unitQuantity=$4 where id=$5 RETURNING *;';
-    const values = [name, batch, price, unitQuantity, id];
-
-    pool.query(text, values)
-      .then((data) => {
-        if (data.rows[0] && data.rows.length === 1) {
-          return res.status(200).json(data.rows[0]);
-        }
-        return res.status(404).json({ error: `resource with id of ${id} does not exist` });
-      })
-      .catch();
-
-    return true;
-  } */
-
   static deleteInput(req, res) {
     const { id } = req.params;
 

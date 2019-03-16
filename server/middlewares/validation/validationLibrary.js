@@ -1,5 +1,5 @@
 class validate {
-  static validate(field, input, min = 2, max = 10, regEx, example) {
+  static validateField(field, input, min = 2, max = 10, regEx, example) {
     let message = '';
 
     if (!input) {
