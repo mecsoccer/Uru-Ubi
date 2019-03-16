@@ -14,21 +14,6 @@ class validate {
 
     return message;
   }
-
-  static validateNumber(field, input, min, max, regEx, example) {
-    let message = '';
-
-    if (!input) {
-      message = `input ${field} must be included`;
-    } else if (input < min || input > max) {
-      message = `${field} should be a number between ${min} and ${max}`;
-    } else if (regEx.test(input) === false) {
-      message = `wrong ${field} format, should be of the form: ${example}`;
-    } else {
-      return true;
-    }
-
-    return message;
-  }
 }
+
 export default validate;

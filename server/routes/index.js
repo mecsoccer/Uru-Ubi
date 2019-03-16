@@ -2,10 +2,8 @@ import express from 'express';
 import inputController from '../controllers/inputController';
 import validateInput from '../middlewares/validation/inputValidator';
 
-const { inputPostValidator, inputUpdateValidator } = validateInput;
-
 const {
-  getAllInputs, getInput, postInput, updateInput, editInput, deleteInput,
+  getAllInputs, getInput, postInput, updateInput, deleteInput,
 } = inputController;
 
 const router = express.Router();
@@ -13,9 +11,8 @@ const router = express.Router();
 // input routes
 router.get('/inputs', getAllInputs);
 router.get('/inputs/:id', getInput);
-router.post('/inputs/create', inputPostValidator, postInput);
-router.put('/inputs/update/:id', inputUpdateValidator, updateInput);
-router.put('/inputs/edit/:id', inputPostValidator, editInput);
-router.delete('/inputs/delete/:id', deleteInput);
+router.post('/inputs', validateInput, postInput);
+router.put('/inputs/:id', validateInput, updateInput);
+router.delete('/inputs/:id', deleteInput);
 
 export default router;
