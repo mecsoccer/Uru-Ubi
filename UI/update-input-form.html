@@ -39,28 +39,34 @@
                 <div class="tab"><a href="./production-calendar.html" class="format-link">CALENDAR</a></div>
             </div>
         </div>
-        <div class="form-container white-text align-center">
-            <div class="input-form dk-green-bkg">
-                <p class="align-center medium underline twenty">Update Input</p>
+        <div class="form-container white-text align-center inline-block">
+            <div class="input-form" id="update-input-app">
+                <div v-if="error" class="error">* error: {{ errorData }}</div>
 
                 <label for="fname" class="left">Name of Input</label>
-                <input class="not-allowed" type="text" id="fname" name="firstname" value="Feed(P.K.C)" readonly>
+                <input class="" type="text" id="fname" name="firstname"  v-model="input.name">
+
+                <label for="batch" class="left">Batch</label>
+                <input class="" type="text" id="batch" name="batch"  v-model="input.batch">
             
-                <label for="lname" class="left">Unit Quantity</label>
-                <input class="not-allowed" type="text" id="lname" name="lastname" value="tonne" readonly>
+                <label for="unit-quantity" class="left">Unit Quantity</label>
+                <input class="" type="text" id="unit-quantity" name="unit-quantity"  v-model="input.unitquantity">
             
                 <label for="Uprice" class="left">Unit Price</label>
-                <input type="text" id="Uprice" name="Uprice">
+                <input type="text" id="Uprice" name="Uprice"  v-model="input.price">
 
                 <label for="Qused" class="left">Quantity Used</label>
-                <input class="not-allowed" type="text" id="Qused" name="Qused" value="8" readonly>
+                <input type="text" id="Qused" name="Qused"  v-model="input.qtyused">
+
+                <div id="loader" v-if="loader"></div>
             
-                <input type="submit" value="Update">
+                <input type="submit" value="Update" v-on:click="submit">
             </div>
         </div>
     </div>
     
+    <script src="./javascript/library/vue.js"></script>
+    <script src="./javascript/update-input.js"></script>
     <script src="./javascript/buttons.js"></script>
 </body>
 </html>
-23

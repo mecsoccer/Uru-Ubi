@@ -39,70 +39,52 @@
                 <div class="tab"><a href="./production-calendar.html" class="format-link">CALENDAR</a></div>
             </div>
         </div>
-        <div class="content white-text align-center">
-            <div class="card input-card pointer">
-                <p>Feed (P.K.C)</p>
-                <div class="fit centered abs-1 radius-5 white-bkg dk-text">25%</div>
-            </div>
-            <div class="card input-card pointer">
-                <p>Feed (P.K.C)</p>
-                <div class="fit centered abs-1 radius-5 white-bkg dk-text">25%</div>
-            </div>
-            <div class="card input-card pointer">
-                <p>Feed (P.K.C)</p>
-                <div class="fit centered abs-1 radius-5 white-bkg dk-text">25%</div>
-            </div>
-            <div class="card input-card pointer">
-                <p>Feed (P.K.C)</p>
-                <div class="fit centered abs-1 radius-5 white-bkg dk-text">25%</div>
-            </div>    
-            <div class="card input-card pointer">
-                <p>Feed (P.K.C)</p>
-                <div class="fit centered abs-1 radius-5 white-bkg dk-text">25%</div>
-            </div>
-            <div class="card input-card pointer">
-                <p>Feed (P.K.C)</p>
-                <div class="fit centered abs-1 radius-5 white-bkg dk-text">25%</div>
-            </div>
-            <div class="card input-card pointer">
-                <p>Feed (P.K.C)</p>
-                <div class="fit centered abs-1 radius-5 white-bkg dk-text">25%</div>
-            </div>
-            <div class="card pointer">
-                <img src="./images/add-button.svg" class="add-button">
-            </div>
-        </div>
-    </div>
-    <div class="modal off">
-        <div class="card-expand off">
-            <p class="align-center white-text twenty underline">Feed(P.K.C)</p>
-            <table class="centered white-text">
-                <tr>
-                    <td>Min. Quantity:</td>
-                    <td>1 tonne</td>
-                </tr>
-                <tr>
-                <td>Current Price:</td>
-                    <td>&#8358;36000</td>
-                </tr>
-                <tr>
-                    <td>Qty Used:</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>Current Total:</td>
-                    <td>&#8358;144000</td>
-                </tr>
-                <tr>
-                    <td>Future Total:</td>
-                    <td>&#8358;288000</td>
-                </tr>
-            </table>
-            <div class="centered fit">
-                <button class="update-input-btn">Update Input</button>
+        <ul class="content white-text align-center" id="app-2">
+            <li class="card input-card pointer" v-for="input in inputs" v-on:click="addListener" v-bind:id="inputs.indexOf(input)">
+                <p>{{ input.name }}</p>
+                <div class="fit centered abs-1 radius-5 white-bkg dk-text">{{ input.percentagecost }}%</div>
+            </li>
+            <li class="card pointer">
+                <a href="./create-input-form.html">
+                    <img src="./images/add-button.svg" class="add-button">
+                </a>
+            </li>
+        </ul>
+        <div class="modal" id="modal-app" v-if="seen" v-on:click="addListener">
+            <div class="card-expand">
+                <p class="align-center white-text twenty underline">{{ input.name }}</p>
+                <table class="centered white-text">
+                    <tr>
+                        <td>Min. Quantity:</td>
+                        <td>{{ input.unitquantity }}</td>
+                    </tr>
+                    <tr>
+                        <td>Current Price:</td>
+                        <td>&#8358;{{ input.price }}</td>
+                    </tr>
+                    <tr>
+                        <td>Qty Used:</td>
+                        <td>{{ input.qtyused }}</td>
+                    </tr>
+                    <tr>
+                        <td>Current Total:</td>
+                        <td>&#8358;{{ input.currenttotal }}</td>
+                    </tr>
+                    <tr>
+                        <td>Percentage Cost:</td>
+                        <td>{{ input.percentagecost }}</td>
+                    </tr>
+                </table>
+                <div class="centered fit">
+                    <button class="update-input-btn">
+                        <a href="./update-input-form.html" class="format-link">Update</a>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+    <script src="./javascript/library/vue.js"></script>
+    <script src="./javascript/input.js"></script>
     <script src="./javascript/buttons.js"></script>
 </body>
 </html>
